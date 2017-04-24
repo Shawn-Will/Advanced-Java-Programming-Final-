@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0"
+	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="TextEditor.EditorController">
+
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<Menu text="File">
+				<MenuItem text="Save" onAction="#onSave" />
+				<MenuItem text="Load" onAction="#onLoad" />
+				<MenuItem text="Split" onAction="#onSplit" />
+				<MenuItem text="Clear" onAction="#onClear" />
+				<MenuItem text="Close" onAction="#onClose" />
+			</Menu>
+
+			<Menu text="Edit">
+				<MenuItem text="Word Count" onAction="#onWordCount" />
+				<MenuItem text="Sentence Count" onAction="#onSentenceCount" />
+				<MenuItem text="Syllable Count" onAction="#onSyllableCount" />
+				<MenuItem text="Flesch Score" onAction="#onFlechScore" />
+				<MenuItem text="Calcualte All" onAction="#onAll" />
+				<MenuItem text="Save Values" onAction="#onSaveVal" />
+			</Menu>
+
+			<Menu text="Utilities">
+				<MenuItem text="Markov Generator" onAction="#onMarkovGen" />
+				<MenuItem text="Binary Tree Search" onAction="#onBST" />
+				<MenuItem text="Spell Checker" onAction="#onSpellCheck" />
+			</Menu>
+
+			<Menu text="Help">
+				<MenuItem text="About" onAction="#onAbout" />
+				<MenuItem text="Flech Score About" onAction="#onFlechScoreAbout" />
+				<MenuItem text="Markov Generator About" onAction="#onMarkovGenAbout" />
+				<MenuItem text="Binary Search Tree About" onAction="#onBTreeAbout" />
+				<MenuItem text="Spell Check About" onAction="#onSpellCheckAbout" />
+			</Menu>
+
+		</MenuBar>
+	</top>
+
+	<bottom>
+		<HBox prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+		<children>
+			<TextArea fx:id="wordCountArea" prefHeight="20" prefWidth="200" />
+			<TextArea fx:id="sentenceCountArea" prefHeight="20"
+				prefWidth="200" />
+			<TextArea fx:id="syllableCountArea" prefHeight="20"
+				prefWidth="200" />
+			<TextArea fx:id="fleschScoreArea" prefHeight="20" prefWidth="200" />
+		</children>
+	</bottom>
+
+	<center>
+		<TextArea fx:id="areaText" prefHeight="200.0" prefWidth="200.0"
+			text="Please use the 'help' at first start up for usage instructions"
+			BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>
